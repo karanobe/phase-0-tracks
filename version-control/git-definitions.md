@@ -17,7 +17,7 @@ of the same code, simultaneously, without breaking the entire code.'
 'A commit is essentially a save point for the project. A good commit message
 is detailed and states what was changed since the last commit.'
 * What is a merge conflict?
-'Sometimes, in Git, if the same file is being changed by multiple users, if
+'In Git, if the same file is being changed by multiple users, if
 one person is updating the line, while another person is deleting the line,
 Git simply cannt know what is correct. That is an example of a merge conflict.
 In this case, you have to solve this conflict and designate the correct change
