@@ -6,3 +6,15 @@
 
 }
 
+.glasses {
+  position: absolute;
+  top: 179px;
+  left: 574px;
+}
+
+.hat {
+  position: absolute;
+  top: 20px;
+  left: 512px;
+}
+
