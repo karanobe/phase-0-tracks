@@ -1,0 +1,54 @@
+Elevator Robot
+
+#Wait out side the elevator for elevator rider to approach.
+#Until you hear a response, or until you have attempted three times:
+  #Ask them if they want to go up or down.
+  #Wait three seconds for a response.
+#If response is up:
+  #Press the top button next to the elevator.
+#Otherwise:
+  #Press the bottom bottom.
+#Wait for doors to open.
+#Enter elevator.
+#Wait for rider to enter elevator.
+#Wait for doors to close.
+#Until you hear a response, or until you have attempted three times:
+  #Ask them what floor they want to go to.
+  #Wait three seconds for a response.
+  #The floor number has to be present on the number pad on the inside wall of the elevator (next to the closing doors).
+#Press the number that they desire.
+#Stand and wait adjacent to the number pad.
+#Wait until the elevator has reached that floor.
+#Wait until the door has opened and the rider has exited.
+#Say "Thank you for riding the elevator."
+#Exit elevator. 
+
+#Repeat Steps #3 - #24 for any additional riders. 
+
+
+
+Making a cup of hot chocolate Algorithm
+
+#Purchase Hot Chocolate package from grocery store.
+#Read Directions.
+#Open package.
+  #Pour content of package into cup.
+
+#Grab a pot.
+#Turn on stove, put on high.
+#Place pot on stove.
+#Pour milk into pot.
+#Patiently wait until milk reaches boiling point.
+#When milk reaches boiling point.
+  #Put on oven mitt.
+  #Pick up hot pot.
+  #Pour pot content into cup with hot chocolate powder.
+#Grab a spoon. 
+  #Stir.
+  #Continue stirring until the content is thorougly mixed. 
+#Add marshmamallows to cup for garnishing.
+
+#Paitiently wait 5 mins for cup content to cool.
+
+#Drink hot chocolate.
+#Enjoy.
