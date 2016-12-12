@@ -7,12 +7,28 @@ until number_of_employees == 0
     puts "What is your name?"
       employee_name = gets.chomp
   
-  if employee_name == ("drake cula" || "Drake Cula" || "tu fang" || "Tu Fang")
+  if employee_name == "drake cula"
     puts "Definitely a vampire."
     number_of_employees -= 1
     next
-  else
     
+  elsif
+    employee_name == "Drake Cula"
+    puts "Definitely a vampire."
+    number_of_employees -= 1
+    next
+  elsif 
+    employee_name == "tu fang"
+    puts "Definitely a vampire."
+    number_of_employees -= 1
+    next
+  elsif 
+    employee_name == "Tu Fang"
+    puts "Definitely a vampire."
+    number_of_employees -= 1
+    next
+    
+  else
   
 
   
@@ -52,7 +68,8 @@ end
     
     
     if allergies == "sunshine"
-        break
+        next
+        number_of_employees -= 1
     end
       
     if age_right && (garlic_bread=="y" || health_insurance=="y")
@@ -73,7 +90,10 @@ end
     end
   number_of_employees -= 1
   end
+  
 end
+
+print "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 
 
 
