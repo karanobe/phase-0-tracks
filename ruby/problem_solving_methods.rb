@@ -20,19 +20,30 @@ p search_array(arr, 21)
 
 
 #RELEASE 1
-[a,b]
+#Fibonocci sequence
+# Write a method where the argument determines how long the final fibanacci sequence array will be
+#start with empty array
+#a=0 ; insert a into beginning of array.
+# a become b.
+# add a and b and insert new value into sequence
 
-while 
-index = 0
-0 + 1 = 1
-a + b = c
-b = a
-c = b
-index += 1
+def fib_method(n)
+  fib_array  = []
+  a = 0
+  b = 1
+  fib_array.push(a)
+  n.times do
+  c = a
+  a = b
+  b = c + b
+  
+  fib_array.push(a)
+  end
+  p fib_array
 end
+ 
+fib_method(10)
 
-1 + 1 = 2
-1+ 2 = 3
-2 + 3 = 5
 
-fib(100)
+
+#RELEASE 2
