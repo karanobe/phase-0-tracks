@@ -47,3 +47,39 @@ fib_method(10)
 
 
 #RELEASE 2
+#1. Bubble sort 
+#2. Bubble sort essentially sorts the array from smallest to largest. It's relatively easy to grasp and understand
+#   the code. Visualizing it while using an array with objects that are largest to smallest helped me grasp the concept
+#   because it sorted them.
+#3. While reading this algorithm, I feel some clarity. I understand what is going on line by line. In addition, if I don't
+#   understand, I am determined to figure it out by googling it. I think that directly affects my ability to learn. At different
+#   times this week, when I was staring at something for hours, tired and frustrating, I absolutely confirmed that those feelings
+#   had a direct correlation with my ability to learn.
+
+
+array = [1,4,34,46,7]
+
+# To calculate how many times integers need to be compared, set a variable for the length of an array
+# Until there is no longer two items to compare 
+ #If the first variable of the array is greater than the variable next to it (+1)
+   #swap the variables so that the larger of the two comes first
+#End the the loop if there are no longer two integers that need to be swapped
+
+def bubble_sort(array)
+ n = array.length 
+ loop do 
+   swapped = false
+
+   (n-1).times do |index| 
+     if array[index] > array[index+1]
+       array[index], array[index+1] = array[index+1], array[index]
+       swapped = true
+     end
+   end
+
+   break if not swapped 
+ end
+p array
+end
+
+bubble_sort(array)
