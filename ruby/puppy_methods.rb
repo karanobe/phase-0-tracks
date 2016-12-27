@@ -61,7 +61,7 @@ Tyrion.high_five
 # ----------------------------------------------------------------------------
 super_array = []
 
-2.times do
+50.times do
   puts "Give me a superhero name."
   super_name = gets.chomp
   super_name = Superheroes.new
