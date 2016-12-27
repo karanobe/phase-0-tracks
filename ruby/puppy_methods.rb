@@ -41,8 +41,13 @@ class Superheroes
     puts "He is BEATING THE BAD GUYS!!"
   end
 
-  def save
-    puts "He just saved that damsel in distress!!!!"
+  def save(number)
+    puts "He just saved #{number} damsels in distress!!!!" unless number == 1
+    if number == 1
+      puts "He just saved a damsel in distress!!!"
+    end
+
+
   end
 
 end
@@ -56,7 +61,7 @@ Tyrion.high_five
 # ----------------------------------------------------------------------------
 super_array = []
 
-50.times do
+2.times do
   puts "Give me a superhero name."
   super_name = gets.chomp
   super_name = Superheroes.new
@@ -65,7 +70,7 @@ end
 
 super_array.each do |superhero|
   puts superhero.beat
-  puts superhero.save
+  puts superhero.save(14)
 end
 
 
