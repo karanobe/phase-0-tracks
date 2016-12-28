@@ -55,7 +55,7 @@ santas = []
 name_array = ["Kobe", "Lebron", "Allen", "Carmelo", "Ray", "Steve", "Charles", "Magic", "Larry", "Steph", "Blake", "Dennis", "Michael"]
 example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
 example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-10.times do 
+200.times do 
   santas << Santa.new(name_array[rand(13)], example_genders[rand(7)], example_ethnicities[rand(7)])
 end
 
