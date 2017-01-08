@@ -35,19 +35,18 @@ function keyMatchFinder(hash1, hash2) {
 var wordArray = []
 
 function randomWord(number) {
-  var randomString = '';
+  var string = '';
   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var counter = 0
-  while (counter < number) {
+  var index = 0
+  while (index < number) {
     var idx = Math.floor(Math.random() * alphabet.length)
-    randomString += alphabet[idx];
+    string += alphabet[idx];
 
-    counter += 1
+    index += 1
   };
-  wordArray.push(randomString);
+  wordArray.push(string);
   console.log(wordArray);
 }
-
 
 // DRIVER CODE: RELEASE 2
 var i = 0;
@@ -59,16 +58,6 @@ do {
 while (i <= 10);
 
 console.log(longestWord(wordArray));
-
-
-
-
-
-
-
-
-
-
 
 // DRIVER CODE: RELEASE 0
 var longArray = ['red','yellow','pink','blue','black','purple','magenta']
@@ -87,5 +76,6 @@ keyMatchFinder(john, josh);
 keyMatchFinder(jack, john);
 
 // DRIVER CODE: RELEASE @
-
+randomWord(3)
+randomWord(10)
 
