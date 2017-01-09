@@ -20,9 +20,9 @@ function longestWord(array) {
 
 // Release 1
 function keyMatchFinder(hash1, hash2) {
-  for (var key in hash1) {
-    for (var value in hash2) {
-      if (value == key) {
+  for (var value1 in hash1) {
+    for (var value2 in hash2) {
+      if (value1 == value2) {
         console.log(true);
       } else {
         console.log(false);
