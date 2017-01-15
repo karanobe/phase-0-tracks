@@ -1,0 +1,80 @@
+# Release 2: Execute SQL Queries
+
+# 1. Display Info in one table:
+
+sqlite> SELECT * FROM med_students;
+1|Jasjeet Virk|Corona|true|2
+2|Shayne Baelish|Montreal|true|2
+3|Peter Pettigrew|Yosemite|false|1
+4|Ashish Chudasami|London|true|3
+5|Reah Bannerji|Calcutta|true|3
+
+# 2. Update an item that meets some condition (you can choose a condition that makes sense)
+
+sqlite> UPDATE med_students SET pass="true" WHERE name="Peter Pettigrew";
+sqlite> SELECT * FROM med_students;
+1|Jasjeet Virk|Corona|true|2
+2|Shayne Baelish|Montreal|true|2
+3|Peter Pettigrew|Yosemite|true|1
+4|Ashish Chudasami|London|true|3
+5|Reah Bannerji|Calcutta|true|3
+sqlite> UPDATE med_students SET rotation_location_id=3 WHERE name="Peter Pettigrew";
+sqlite> SELECT * FROM med_students;
+1|Jasjeet Virk|Corona|true|2
+2|Shayne Baelish|Montreal|true|2
+3|Peter Pettigrew|Yosemite|true|3
+4|Ashish Chudasami|London|true|3
+5|Reah Bannerji|Calcutta|true|3
+
+#3. Display the information in both tables using one query.
+
+sqlite> SELECT * FROM med_students,
+   ...> rotations_location WHERE med_students.rotation_location_id = rotations_location.id;
+1|Jasjeet Virk|Corona|true|2|2|Swedish Covenant Hospitatl
+2|Shayne Baelish|Montreal|true|2|2|Swedish Covenant Hospitatl
+3|Peter Pettigrew|Yosemite|false|1|1|none
+4|Ashish Chudasami|London|true|3|3|Mark Sloan Grace Hospital
+5|Reah Bannerji|Calcutta|true|3|3|Mark Sloan Grace Hospital
+
+#4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT
+   ...> med_students.id,
+   ...> med_students.name,
+   ...> med_students.location,
+   ...> rotations_location.name
+   ...> FROM med_students JOIN rotations_location
+   ...> ON
+   ...> med_students.rotation_location_id = rotations_location.id;
+1|Jasjeet Virk|Corona|Swedish Covenant Hospitatl
+2|Shayne Baelish|Montreal|Swedish Covenant Hospitatl
+3|Peter Pettigrew|Yosemite|Mark Sloan Grace Hospital
+4|Ashish Chudasami|London|Mark Sloan Grace Hospital
+5|Reah Bannerji|Calcutta|Mark Sloan Grace Hospital
+
+#5 Delete an item that meets some condition (you can choose a condition that makes sense)
+
+sqlite> DELETE FROM med_students
+   ...> WHERE id = 3;
+sqlite> SELECT * FROM med_students;
+1|Jasjeet Virk|Corona|true|2
+2|Shayne Baelish|Montreal|true|2
+4|Ashish Chudasami|London|true|3
+5|Reah Bannerji|Calcutta|true|3
+
+# RELEASE 3: Research on your own:
+
+# LEFT JOIN and RIGHT JOIN
+
+sqlite> SELECT med_students.id, med_students.name, med_students.location, rotations_location.name
+   ...> FROM med_students LEFT JOIN rotations_location
+   ...> ON med_students.rotation_location_id = rotations_location.id;
+1|Jasjeet Virk|Corona|Swedish Covenant Hospitatl
+2|Shayne Baelish|Montreal|Swedish Covenant Hospitatl
+4|Ashish Chudasami|London|Mark Sloan Grace Hospital
+5|Reah Bannerji|Calcutta|Mark Sloan Grace Hospital
+sqlite> SELECT med_students.id, med_students.name, med_students.location, rotations_location.name
+   ...> FROM med_students RIGHT JOIN rotations_location
+   ...> ON med_students.rotation_location_id = rotations_location.id;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+sqlite>
