@@ -1,5 +1,4 @@
-#run through the jquery course from our one month course to refresh our memory on jquery.
+#use W3 schools to find simple, easy to use/understand jquery commands
 #research the greater advantages and possiblilties of jquery
-#make a fun interactive page with jquery
-#make it look cute
-#make a simple blankish webpage that will be built up of jquery and javascript prompts that ask user for inputs and changes the page accordingly
+#make a page about spiderman
+#use jquery to toggle show/hide spiderman's true identity
